@@ -17,6 +17,19 @@ struct ContentView : View {
     }
 }
 
+var fireBallEntity :ModelEntity! // 白球
+var planeAnchor :AnchorEntity!
+var originAnchor:ARPlaneAnchor!
+var planeEntity :ModelEntity!
+var subscribes: [Cancellable] = []
+var score = 0
+var button:UIButton!
+var scoreLabel = UILabel.init(frame: .init(x: UIScreen.main.bounds.width/2 - 100, y: 100, width: 200, height: 70))
+var switchView = UISwitch.init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
+var clueLabel: UILabel = .init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
+var recentIndexFingerPoint:CGPoint!
+var request: VNDetectHumanHandPoseRequest!
+
 // 发射模式
 enum FireMode: Int {
     case tap = 1 // 点击屏幕发射
@@ -78,19 +91,6 @@ struct ARViewContainer: UIViewRepresentable {
         recentIndexFingerPoint = normalizedIndexPoint
     }
 }
-
-var fireBallEntity :ModelEntity! // 白球
-var planeAnchor :AnchorEntity!
-var originAnchor:ARPlaneAnchor!
-var planeEntity :ModelEntity!
-var subscribes: [Cancellable] = []
-var score = 0
-var button:UIButton!
-var scoreLabel = UILabel.init(frame: .init(x: UIScreen.main.bounds.width/2 - 100, y: 100, width: 200, height: 70))
-var switchView = UISwitch.init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
-var clueLabel: UILabel = .init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
-var recentIndexFingerPoint:CGPoint!
-var request: VNDetectHumanHandPoseRequest!
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
