@@ -11,12 +11,6 @@ import ARKit
 import Combine
 import Vision
 
-struct ContentView : View {
-    var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
-    }
-}
-
 var fireBallEntity :ModelEntity! // 白球
 var planeAnchor :AnchorEntity!
 var originAnchor:ARPlaneAnchor!
@@ -30,6 +24,11 @@ var clueLabel: UILabel = .init(frame: .init(x: UIScreen.main.bounds.size.width/2
 var recentIndexFingerPoint:CGPoint!
 var request: VNDetectHumanHandPoseRequest!
 
+struct ContentView : View {
+    var body: some View {
+        return ARViewContainer().edgesIgnoringSafeArea(.all)
+    }
+}
 // 发射模式
 enum FireMode: Int {
     case tap = 1 // 点击屏幕发射

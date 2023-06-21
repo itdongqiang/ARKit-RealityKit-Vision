@@ -14,8 +14,8 @@
 		8C1DFCC527619BC500B77080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DFCC427619BC500B77080 /* Preview Assets.xcassets */; };
 		8C1DFCCF27619BC600B77080 /* ARSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCCE27619BC600B77080 /* ARSwiftUITests.swift */; };
 		8C1DFCD927619BC600B77080 /* ARSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCD827619BC600B77080 /* ARSwiftUIUITests.swift */; };
-		8C1DFCD927619BC600B77080 /* ARView.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B48262A4311BB00C0B3FD /* ARView.Delegate.swift */; };
 		8C1DFCDB27619BC600B77080 /* ARSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCDA27619BC600B77080 /* ARSwiftUIUITestsLaunchTests.swift */; };
+		8C8B48272A4311BB00C0B3FD /* ARView.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B48262A4311BB00C0B3FD /* ARView.Delegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 		8C1DFCD427619BC600B77080 /* ARSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C1DFCD827619BC600B77080 /* ARSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSwiftUIUITests.swift; sourceTree = "<group>"; };
 		8C1DFCDA27619BC600B77080 /* ARSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C8B48262A4311BB00C0B3FD /* ARView.Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARView.Delegate.swift; path = "../../../../.Trash/ARKit-RealityKit-Vision-main 19.04.51/ARSwiftUI-Vision-RealityKit/ARSwiftUI/ARView.Delegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 				8C1DFCBB27619BC200B77080 /* AppDelegate.swift */,
 				8C1DFCBD27619BC200B77080 /* ContentView.swift */,
 				8C1DFCBF27619BC200B77080 /* Experience.rcproject */,
+				8C8B48262A4311BB00C0B3FD /* ARView.Delegate.swift */,
 				8C1DFCC127619BC500B77080 /* Assets.xcassets */,
 				8C1DFCC327619BC500B77080 /* Preview Content */,
 			);
@@ -264,6 +266,7 @@
 				8C1DFCBE27619BC200B77080 /* ContentView.swift in Sources */,
 				8C1DFCBC27619BC200B77080 /* AppDelegate.swift in Sources */,
 				8C1DFCC027619BC200B77080 /* Experience.rcproject in Sources */,
+				8C8B48272A4311BB00C0B3FD /* ARView.Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
