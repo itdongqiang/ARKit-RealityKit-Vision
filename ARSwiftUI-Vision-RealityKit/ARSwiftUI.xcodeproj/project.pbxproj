@@ -14,6 +14,7 @@
 		8C1DFCC527619BC500B77080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1DFCC427619BC500B77080 /* Preview Assets.xcassets */; };
 		8C1DFCCF27619BC600B77080 /* ARSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCCE27619BC600B77080 /* ARSwiftUITests.swift */; };
 		8C1DFCD927619BC600B77080 /* ARSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCD827619BC600B77080 /* ARSwiftUIUITests.swift */; };
+		8C1DFCD927619BC600B77080 /* ARView.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B48262A4311BB00C0B3FD /* ARView.Delegate.swift */; };
 		8C1DFCDB27619BC600B77080 /* ARSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1DFCDA27619BC600B77080 /* ARSwiftUIUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
