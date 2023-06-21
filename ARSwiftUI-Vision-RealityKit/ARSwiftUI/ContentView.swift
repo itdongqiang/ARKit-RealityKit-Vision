@@ -40,7 +40,7 @@ struct ARViewContainer: UIViewRepresentable {
         let config = ARWorldTrackingConfiguration()
         config.planeDetection = .horizontal
         // 启用环境纹理贴图和人形遮挡
-//        config.environmentTexturing = .automatic
+        config.environmentTexturing = .automatic
 //        config.frameSemantics = [.personSegmentation]
         arView.session.delegate = arView
         // 平面识别引导-这里实际没有使用检测的平面
@@ -86,8 +86,9 @@ var planeEntity :ModelEntity!
 var subscribes: [Cancellable] = []
 var score = 0
 var button:UIButton!
-var scoreLabel = UILabel.init(frame: .init(x: UIScreen.main.bounds.width/2 - 35, y: 100, width: 70, height: 70))
+var scoreLabel = UILabel.init(frame: .init(x: UIScreen.main.bounds.width/2 - 100, y: 100, width: 200, height: 70))
 var switchView = UISwitch.init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
+var clueLabel: UILabel = .init(frame: .init(x: UIScreen.main.bounds.size.width/2-50, y: UIScreen.main.bounds.size.height - 240, width: 100, height: 40))
 var recentIndexFingerPoint:CGPoint!
 var request: VNDetectHumanHandPoseRequest!
 extension ARView: ARSessionDelegate{
@@ -126,8 +127,19 @@ extension ARView: ARSessionDelegate{
         coachingOverlay.removeFromSuperview()
         switchView.center = .init(x: self.center.x, y: switchView.center.y)
         switchView.addTarget(self, action: #selector(changeFireMode), for: .valueChanged)
-        self.addSubview(switchView)
+        setupClueLabel()
+        addSubview(clueLabel)
+        addSubview(switchView)
     }
+    
+    private func setupClueLabel() {
+        clueLabel.center = .init(x: self.center.x, y: switchView.center.y + 30)
+        clueLabel.textAlignment = .center
+        clueLabel.textColor = .red
+        clueLabel.font = .systemFont(ofSize: 12)
+        clueLabel.text = "手势发射"
+    }
+    
     // 重置平面Entity
     func resetPlaneEntity() {
         self.scene.findEntity(named: "plane")?.removeFromParent()
@@ -200,7 +212,7 @@ extension ARView: ARSessionDelegate{
         planeAnchor.addChild(wallEntity3)
         
         // 得分Label
-        scoreLabel.text = "0"
+        scoreLabel.text = "得分: 0"
         scoreLabel.font = .boldSystemFont(ofSize: 50)
         scoreLabel.textColor = .green
         scoreLabel.textAlignment = .center
@@ -211,7 +223,7 @@ extension ARView: ARSessionDelegate{
     func addBalls() {
         // 彩球
         score = 0
-        scoreLabel.text = "\(score)"
+        scoreLabel.text = "得分: \(score)"
         let count = 3
         for i in 0...count {
             for j in 0...count {
